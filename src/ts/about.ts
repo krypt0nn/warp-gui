@@ -1,5 +1,6 @@
 const shell = require('electron').shell;
-const $ = require('../js/cash.min.js');
+
+import $ from 'cash-dom';
 
 $(() => {
     $('a[href]').on('click', (e) => {

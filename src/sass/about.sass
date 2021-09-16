@@ -1,0 +1,38 @@
+@use 'includes/fonts'
+@use 'includes/colors'
+@use 'includes/gradients'
+
+.icon
+    width: 20%
+    display: block
+    margin: 32px auto 0
+
+.text
+    margin-top: 48px
+    text-align: center
+
+    line-height: 28px
+    letter-spacing: 0.25px
+
+    user-select: none
+
+    > span
+        -webkit-background-clip: text !important
+        -webkit-text-fill-color: transparent !important
+
+.flex-container
+    display: inline-flex
+    width: 100%
+    margin-top: 32px
+
+.links
+    margin: 0 auto
+
+    -webkit-background-clip: text !important
+    -webkit-text-fill-color: transparent !important
+
+    > a
+        border-bottom: 1px dotted colors.$grey
+
+    > a:not(:last-child)
+        margin-right: 16px

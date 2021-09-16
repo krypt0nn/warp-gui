@@ -1,0 +1,81 @@
+@use 'includes/fonts'
+@use 'includes/colors'
+@use 'includes/gradients'
+
+.container
+    width: 80%
+    margin: 0 auto
+
+.title
+    text-align: center
+    margin-top: 32px
+
+    font-weight: 700
+    font-size: 48px
+    letter-spacing: 4px
+    
+    -webkit-background-clip: text !important
+    -webkit-text-fill-color: transparent !important
+
+    user-select: none
+
+.comet
+    width: 80%
+    margin: 0 auto
+    margin-top: 64px
+    cursor: pointer
+
+.button
+    width: 80%
+    height: 48px
+
+    display: block
+    margin: 0 auto
+    margin-top: 64px
+
+    border-radius: 12px
+
+    color: white
+    font-size: 16px
+    font-weight: 800
+    letter-spacing: 1px
+
+    cursor: pointer
+    border: unset
+
+footer
+    display: inline-flex
+    align-items: center
+
+    width: 100%
+    height: 48px
+
+    background-color: colors.$secondary
+
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+
+    user-select: none
+
+#warp-version
+    font-size: 14px
+    color: colors.$grey
+
+    margin-left: 16px
+
+.connection-stats
+    font-size: 14px
+    color: colors.$grey
+
+    margin-left: auto
+    margin-right: 16px
+
+    > div
+        display: inline-flex
+        align-items: center
+
+#sent,
+#received
+    margin-left: 4px

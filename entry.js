@@ -7,14 +7,12 @@ function createWindow ()
         width: 400,
         height: 460,
         webPreferences: {
-            // Is not safety
-            // Use it to have access to the node modules inside html files
             nodeIntegration: true,
             contextIsolation: false
         },
+        icon: path.join(__dirname, 'public', 'images', 'warp.png'),
         autoHideMenuBar: true,
-        resizable: false,
-        icon: path.join(__dirname, 'src', 'images', 'warp.png')
+        resizable: false
     });
 
     mainWindow.on('close', (event) => {
@@ -28,7 +26,7 @@ function createWindow ()
         }
     });
 
-    mainWindow.loadFile(path.join(__dirname, 'src', 'html', 'index.html'));
+    mainWindow.loadFile(path.join(__dirname, 'public', 'html', 'index.html'));
 
     // mainWindow.webContents.openDevTools();
 
@@ -123,19 +121,13 @@ function updateTray(ipc, enabled, sent = null, received = null, latency = null, 
     tray.setContextMenu(contextMenu);
 }
 
-// This method will be called when Electron has finished
-// initialization and is ready to create browser windows.
-// Some APIs can only be used after this event occurs.
-
 app.whenReady().then(() => {
-    tray = new Tray (path.join(__dirname, 'src', 'images', 'warp.png'));
+    tray = new Tray (path.join(__dirname, 'public', 'images', 'warp.png'));
     tray.setToolTip('Cloudflare WARP');
 
     mainWindow = createWindow();
 
     app.on('activate', () => {
-        // On macOS it's common to re-create a window in the app when the
-        // dock icon is clicked and there are no other windows open.
         if (BrowserWindow.getAllWindows().length === 0)
             mainWindow = createWindow();
     });
@@ -149,8 +141,6 @@ app.whenReady().then(() => {
             width: 460,
             height: 400,
             webPreferences: {
-                // Is not safety
-                // Use it to have access to the node modules inside html files
                 nodeIntegration: true,
                 contextIsolation: false
             },
@@ -162,17 +152,13 @@ app.whenReady().then(() => {
             autoHideMenuBar: true,
             resizable: false,
             
-            icon: path.join(__dirname, 'src', 'images', 'warp.png')
+            icon: path.join(__dirname, 'public', 'images', 'warp.png')
         });
         
-        aboutWindow.loadFile(path.join(__dirname, 'src', 'html', 'about.html'));
+        aboutWindow.loadFile(path.join(__dirname, 'public', 'html', 'about.html'));
         aboutWindow.show();
     });
 });
-
-// Quit when all windows are closed, except on macOS. There, it's common
-// for applications and their menu bar to stay active until the user quits
-// explicitly with Cmd + Q.
 
 /*app.on('window-all-closed', () => {
     if (process.platform !== 'darwin')
