@@ -98,7 +98,7 @@ $(() =>
             if (await Warp.isServiceActive())
                 Warp.connect().catch((error) => alert(error));
 
-            else shell_exec('systemctl enable warp-svc.service');
+            else shell_exec('systemctl start warp-svc.service');
         }
 
         else Warp.disconnect().catch((error) => alert(error));

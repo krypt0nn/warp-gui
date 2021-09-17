@@ -47,7 +47,7 @@ function updateTray(ipc, enabled, sent = null, received = null, latency = null, 
     {
         contextMenu = Menu.buildFromTemplate ([
             {
-                label: `In: ${sent} / Out: ${received}`,
+                label: `In: ${received} / Out: ${sent}`,
                 enabled: false
             },
             {

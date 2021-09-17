@@ -68,7 +68,7 @@ const cash_dom_1 = __importDefault(require("cash-dom"));
             if (yield warp_1.Warp.isServiceActive())
                 warp_1.Warp.connect().catch((error) => alert(error));
             else
-                (0, shell_exec_1.shell_exec)('systemctl enable warp-svc.service');
+                (0, shell_exec_1.shell_exec)('systemctl start warp-svc.service');
         }
         else
             warp_1.Warp.disconnect().catch((error) => alert(error));
