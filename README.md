@@ -1,3 +1,7 @@
+<p align="center">This project was archived because WARP was partially blocked in Russia</p>
+
+<br>
+
 <h1 align="center">Cloudflare WARP GUI for Linux</h1>
 
 <p align="center"><img src="https://i.ibb.co/H2SryLH/Screenshot-from-2021-09-14-22-13-41.png"></p>
