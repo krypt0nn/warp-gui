@@ -11,7 +11,7 @@ const bundler = new Bundler({
         name: 'Cloudflare WARP',
 
         // Path to the icon
-        icon: path.join(__dirname, 'public/icons/warp.png')
+        icon: path.join(__dirname, 'public/icons/64x64.png')
     },
 
     // Neutralino binary info
