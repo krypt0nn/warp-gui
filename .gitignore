@@ -1,3 +1,14 @@
-/node_modules 
+.lite_workspace.lua
+yarn.lock
+
+/bin
 /dist
-/package-lock.json
+/bundle
+/node_modules
+
+neutralino.js
+*.AppImage
+
+.storage
+.tmp
+*.log

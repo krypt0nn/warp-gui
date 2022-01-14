@@ -1,10 +1,6 @@
-<p align="center">This project was archived because WARP was partially blocked in Russia</p>
-
-<br>
-
 <h1 align="center">Cloudflare WARP GUI for Linux</h1>
 
-<p align="center"><img src="https://i.ibb.co/H2SryLH/Screenshot-from-2021-09-14-22-13-41.png"></p>
+<p align="center"><img src="repository/app.png"></p>
 
 <p align="center">This is unofficial GUI client for Cloudflare WARP. Now we don't have official one</p>
 
@@ -12,35 +8,41 @@
 
 # Installation
 
-Now this program is available only in portable binary form. Flatpak support will be added in a future
+1. Install [cloudflare-warp-bin](https://aur.archlinux.org/packages/cloudflare-warp-bin) AUR package *(or somehow else build [one of these packages](https://pkg.cloudflareclient.com/packages/cloudflare-warp))*
+2. Run `warp-cli register` command
+3. Download this project. Done
 
-To download and run this program you should go to the [Releases](https://github.com/krypt0nn/warp-gui/releases) section and download `Cloudflare.WARP-linux-x64.zip` archive from the last release
+# Known issues
 
-Then, unpack this archive somewhere you want and run the `Cloudflare WARP` file
+- [ ] Tray icon doesn't work with AppImage
 
-To work this program requires `cloudflare-warp-bin` AUR package
+# Development
 
-## Building from source
+## Clone repository
 
-```sh
+```zsh
 git clone https://github.com/krypt0nn/warp-gui
 cd warp-gui
-npm i
-npm run build:linux
+yarn
 ```
 
-Requires `node` package to be installed. Release folder will be stored in `dist` folder
+## Run from source
 
-## Running from source
-
-```sh
-git clone https://github.com/krypt0nn/warp-gui
-cd warp-gui
-npm i
-npm start
+```zsh
+yarn dev
 ```
 
-Requires `node` package to be installed. Release folder will be stored in `dist` folder
+## Build
+
+```zsh
+yarn build
+```
+
+## Bundle to AppImage
+
+```zsh
+yarn bundle
+```
 
 <br>
 

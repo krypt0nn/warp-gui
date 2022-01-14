@@ -1,0 +1,14 @@
+$grad-hot-begin: #F0672C
+$grad-hot-end: #dd1e83
+
+$grad-cold-begin: #1EA3C8
+$grad-cold-end: #4db6b2
+    
+@mixin gradient($begin, $end)
+    background: linear-gradient(to right, $begin 0%, $end 100%)
+
+.gradient-hot
+    @include gradient($grad-hot-begin, $grad-hot-end)
+
+.gradient-cold
+    @include gradient($grad-cold-begin, $grad-cold-end)
